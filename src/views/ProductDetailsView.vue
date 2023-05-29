@@ -242,8 +242,9 @@ const fullfilProduct = () => {
   });
 
   console.log(submitArrayFulfill);
-  axios.put('/products/fullfil', submitArrayFulfill)
+  axios.put('/products/fulfill/8236469354772')
     .then(response => {
+      console.log(response);
       isSuccess.value = true;
       setTimeout(() => {
         isSuccess.value = false;

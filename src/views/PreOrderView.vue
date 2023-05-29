@@ -303,7 +303,8 @@ onMounted(() => {
 });
 
 const handelShipping= () => {
-  axios.post('preorder/shipping', preorderCheck.value)
+  console.log(preorderCheck.value);
+  axios.put('preorders/fulfill', preorderCheck.value)
     .then(async response => {
       console.log(response);
       isSuccess.value = true;
